@@ -1,12 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return f'<h1>Hello from Flask servername</h1>'
-####
+    return render_template("index.html")
 
-@app.route("/name")
-def name():
-    return f'<h1>You are on name page</h1>'
+
+
